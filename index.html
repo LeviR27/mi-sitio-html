@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypochlorous Acid: The Perfect Disinfectant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #007bff; /* A vibrant blue */
+            --secondary-color: #28a745; /* A fresh green */
+            --text-color: #343a40; /* Dark gray for main text */
+            --light-text-color: #6c757d; /* Lighter gray for secondary text */
+            --background-color: #f8f9fa; /* Light background */
+            --white: #ffffff;
+            --border-color: #e9ecef; /* Light border */
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(45deg);
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5em;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-section {
+            background: linear-gradient(to right, var(--secondary-color), #218838);
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transform: translateY(-20px);
+            opacity: 0;
+            animation: slideIn 1s forwards ease-out;
+        }
+
+        @keyframes slideIn {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .hero-section p {
+            font-size: 1.3em;
+            max-width: 800px;
+            margin: 25px auto 0;
+            font-weight: 300;
+        }
+
+        .content-section {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            font-size: 2.5em;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--border-color);
+            text-align: center;
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--secondary-color);
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 1em;
+            color: var(--text-color);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background-color: var(--background-color);
+            margin-bottom: 12px;
+            padding: 18px;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        ul li:hover {
+            transform: translateY(-3px);
+        }
+
+        ul li strong {
+            color: var(--primary-color);
+            margin-right: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+        }
+
+        .icon-check {
+            color: var(--secondary-color);
+            font-size: 1.5em;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 18px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3; /* Darker blue */
+            transform: translateY(-2px);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            .hero-section {
+                padding: 60px 15px;
+            }
+            .hero-section p {
+                font-size: 1.1em;
+            }
+            .content-section {
+                padding: 30px;
+            }
+            h2 {
+                font-size: 2em;
+            }
+            h3 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 1em;
+            }
+            .cta-button {
+                padding: 18px 35px;
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .hero-section {
+                padding: 40px 10px;
+            }
+            .container {
+                padding: 10px;
+            }
+            ul li {
+                padding: 15px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .icon-check {
+                margin-bottom: 10px;
+            }
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Hypochlorous Acid: The Perfect Disinfectant</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <p>Discover the revolutionary power of **Hypochlorous Acid (HOCl)**, nature's own disinfectant, offering unparalleled safety and effectiveness for a healthier world.</p>
+                <a href="#introduction" class="cta-button"></a>
+            </div>
+        </section>
+
+        <section class="container content-section" id="introduction">
+            <h2>A Solution in Times of Crisis</h2>
+            <p>During the difficult days of the 2020 pandemic, society faced a major challenge: how to stay safe from a rapidly spreading and deadly virus. People needed more than just face masks and social distancing — For years, the search for an effective disinfectant against viruses has been a challenge. Alcohol-based hand sanitizers prove useless, and the extreme heat needed to eliminate it is unfeasible for daily hygiene. Although bleach is effective, its toxicity limits its use, especially on skin, food, and frequently touched surfaces where norovirus can persist for weeks.</p>
+            <p>We needed a disinfectant that could offer security, reliability, and quality. With the world in a state of uncertainty, a solution emerged that checked all the boxes. That solution was **hypochlorous acid**, a powerful, safe, and versatile compound that quickly gained attention as a frontline defender against illness.</p>
+            <hr>
+            <img src="pandemia.jpg" alt="Image depicting the 2020 pandemic" class="img-fluid">
+            <hr>
+        </section>
+
+        <section class="container content-section">
+            <h2>What is Hypochlorous Acid?</h2>
+            <p>"Hypochlorous acid, also known as HClO, is a naturally occurring substance in the body and the same chemical that white blood cells themselves produce to fight infections and kill pathogens through oxidation and chlorination, this makes hypochlorous acid one of the only non-toxic disinfection agents" (AXON, 2020).</p>
+            <p>What makes hypochlorous acid so remarkable is that it works effectively at very low concentrations. A small amount is enough to kill a wide spectrum of bacteria and viruses, as well as neutralize proteins like those found in inanimate pet allergens. This efficiency, combined with its low cost, gives hypochlorous acid an edge over traditional disinfectants that are often harsher, more toxic, and less adaptable. All of those characteristics causes an extremely wide range of applications across various industries.</p>
+            <hr>
+            <img src="hclo.jpg" alt="Image of a Hypochlorous Acid molecule" class="img-fluid">
+            <hr>
+        </section>
+
+        <section class="container content-section">
+            <h2>Diverse Applications Across Industries</h2>
+            <hr>
+                       <hr>
+            <h3>Healthcare:</h3>
+            <p>Hospitals, clinics, dental offices, and medical facilities heavily rely on HOCl for surface disinfection, sanitizing medical equipment, and even for wound care and antisepsis. Its effectiveness against multi-drug resistant germs, including MRSA and spores, is invaluable in preventing healthcare-associated infections (HAIs). It's also used in personal care products like eye washes and nasal sprays.</p>
+            <hr>
+                       <hr>
+
+            <h3>Food and Beverage Industry:</h3>
+            <p>From farm to fork, HOCl plays a crucial role in ensuring food safety. It's used for washing produce, sanitizing food preparation surfaces and equipment, and even as an additive to animal drinking water to control microbial quality in livestock and poultry production. Its "no-rinse" approval by regulatory bodies like the EPA further streamlines food processing.</p>
+            <hr>
+                       <hr>
+
+            <h3>Water Treatment:</h3>
+            <p>HOCl is widely employed in the disinfection of drinking water, swimming pools, and industrial wastewater. It effectively kills bacteria, viruses, and algae, ensuring clean and safe water for consumption and recreational use. Marine sanitation devices on ships and yachts also utilize HOCl generated from seawater to disinfect waste.</p>
+            <hr>
+                        <hr>
+
+            <h3>Hospitality (Hotels, Restaurants, Cruise Ships):</h3>
+            <p>Hotels use HOCl for cleaning and sanitizing rooms, common areas, bathrooms, and linens. Restaurants leverage its non-flammable and non-toxic characteristics for disinfecting food preparation surfaces and general sanitization. Fogging methods offer efficient environmental sterilization and odor elimination.</p>
+            <hr>
+                        <hr>
+
+            <h3>Agriculture and Aquaculture:</h3>
+            <p>HOCl water is increasingly used in "smart agriculture" for seed disinfection, soil improvement, plant growth regulation, and as an eco-friendly alternative to chemical pesticides for pest and disease management. In aquaculture, it's vital for improving farming environments and preventing fish diseases.</p>
+            <hr>
+                        <hr>
+
+            <h3>Commercial Cleaning and Janitorial Services:</h3>
+            <p>As a highly effective and safe alternative to traditional bleach, HOCl is becoming a go-to for commercial cleaning companies looking to provide superior sanitization without the harshness or hazardous byproducts. It can be used for general surface cleaning, floor care, and deodorization.</p>
+            <hr>
+                        <hr>
+
+            <h3>Oil and Gas Industry:</h3>
+            <p>HOCl's biocide properties are utilized for purification of oil and natural gas wells, offering an eco-friendly solution for this sector.</p>
+            <hr>
+                       <hr>
+
+            <p>The increasing awareness of health and hygiene, coupled with the demand for sustainable and safe solutions, is driving the widespread adoption of hypochlorous acid across industries. Its ability to effectively eliminate pathogens, its gentle nature, and its environmental benefits position HOCl as a cornerstone of modern industrial hygiene. As research continues to uncover new applications and optimize its production, hypochlorous acid is poised to further revolutionize how industries approach cleanliness, safety, and sustainability in the years to come.</p>
+            <p>Hypochlorous acid represents a rare combination of potency, rentability and confidence. From hospitals and homes to farms and food plants, its diverse applications demonstrate its growing importance in modern health and hygiene practices.</p>
+
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="#" class="cta-button"></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Hypochlorous Acid Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
